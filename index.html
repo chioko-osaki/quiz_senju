@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>木造千手観音坐像クイズ｜千手観音まつり2026 - 「木造千手観音坐像」をモチーフにしたクイズ</title>
+<title>千手観音クイズ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -24,9 +24,8 @@
     <div class="deco-shape deco-star deco-star--2" aria-hidden="true">★</div>
 
     <div class="start-card">
-      <p class="eyebrow-plain">千手観音まつり2026</p>
-      <br>
-      <h1 id="quiz-title" class="quiz-title"><ruby>木造千手観音坐像<rt>もくぞうせんじゅかんのんざぞう</rt></ruby><br>クイズ</h1>
+      <p class="eyebrow-plain">文化財(ぶんかざい)クイズラリー</p>
+      <h1 id="quiz-title" class="quiz-title">千手観音クイズ</h1>
       <p id="start-description" class="start-description"></p>
       <button id="btn-start" class="btn btn-primary btn-start" type="button">
         スタート
@@ -49,7 +48,7 @@
       <h2 id="question-text" class="question-text"></h2>
       <div id="choices" class="choices" role="group" aria-label="選択肢"></div>
     </div>
-    
+
     <button id="btn-back-to-start-question" class="btn-text-subtle js-back-to-start" type="button">
       最初に戻る
     </button>
@@ -61,19 +60,19 @@
       <div id="feedback-badge" class="feedback-badge" aria-live="polite"></div>
 
       <div class="feedback-body">
-        <p class="feedback-label"><ruby>正解<rt>せいかい</rt></ruby></p>
+        <p class="feedback-label">正解</p>
         <p id="feedback-correct-answer" class="feedback-answer"></p>
 
-        <p class="feedback-label"><ruby>解説<rt>かいせつ</rt></ruby></p>
+        <p class="feedback-label">解説</p>
         <p id="feedback-explanation" class="feedback-explanation"></p>
       </div>
 
-      <button id="btn-next" class="btn btn-primary" type="button">つぎのもんだいへ</button>
+      <button id="btn-next" class="btn btn-primary" type="button">次の問題へ</button>
     </div>
 
-   <button id="btn-back-to-start-feedback" class="btn-text-subtle js-back-to-start" type="button">
-     最初に戻る
-   </button>
+    <button id="btn-back-to-start-feedback" class="btn-text-subtle js-back-to-start" type="button">
+      最初に戻る
+    </button>
   </section>
 
   <!-- ============ ⑤結果画面 ============ -->
@@ -81,7 +80,7 @@
     <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
 
     <div class="result-card">
-      <h2 class="result-title">クイズ<ruby>終了<rt>しゅうりょう</rt></ruby>！</h2>
+      <h2 class="result-title">クイズ終了！</h2>
       <p id="result-score" class="result-score"></p>
       <p id="result-message" class="result-message"></p>
 
@@ -90,13 +89,13 @@
         <p id="cta-message" class="cta-message"></p>
       </div>
 
-      <button id="btn-restart" class="btn btn-secondary" type="button">もういちど挑戦(ちょうせん)する</button>
+      <button id="btn-restart" class="btn btn-secondary" type="button">もう一度挑戦する</button>
     </div>
   </section>
 
   <!-- 読み込みエラー時のみ表示 -->
   <p id="load-error" class="load-error" hidden>
-    クイズデータの読み込みに<ruby>失敗<rt>しっぱい</rt></ruby>しました。ページを再読み込みしてください。
+    クイズデータの読み込みに失敗しました。ページを再読み込みしてください。
   </p>
 
 </div>

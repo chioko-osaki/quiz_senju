@@ -46,9 +46,9 @@
 
     loadError: document.getElementById("load-error"),
   };
-   
-   // 「最初に戻る」ボタン(問題画面・正誤画面の下部、複数箇所にあるのでまとめて取得)
-   const backToStartButtons = document.querySelectorAll(".js-back-to-start");
+
+  // 「最初に戻る」ボタン(問題画面・正誤画面の下部、複数箇所にあるのでまとめて取得)
+  const backToStartButtons = document.querySelectorAll(".js-back-to-start");
 
   // クイズ全体のデータと、いま何問目かなどの状態を保存する場所
   let quizData = null;
@@ -352,12 +352,12 @@
     renderQuestion();
   }
 
-   // 途中でも/結果画面でも、いつでもスタート画面に戻すための処理
-   function goToStart() {
-      playSound("buttonClick");
-      renderStartScreen();
-      showScreen(el.screenStart);
-   }
+  // 途中でも結果画面でも、いつでもスタート画面に戻すための処理
+  function goToStart() {
+    playSound("buttonClick");
+    renderStartScreen();
+    showScreen(el.screenStart);
+  }
 
   /* ---------------------------------------------------------
      11. 初期化
@@ -376,10 +376,10 @@
       el.btnStart.addEventListener("click", startQuiz);
       el.btnNext.addEventListener("click", goToNext);
       el.btnRestart.addEventListener("click", goToStart); // 結果画面 → 最初の画面へ
-       backToStartButtons.forEach((btn) => {
-          btn.addEventListener("click", goToStart);
-         });
-   
+
+      backToStartButtons.forEach((btn) => {
+        btn.addEventListener("click", goToStart);
+      });
     } catch (error) {
       // JSONの読み込みや内容に問題があった場合、画面を止めずにエラー表示だけ出す
       console.error(error);
