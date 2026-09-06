@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>千手観音クイズ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" id="app">
+
+  <!-- 背景の和柄パターン(装飾のみ) -->
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <!-- ============ ①スタート画面 ============ -->
+  <section id="screen-start" class="screen screen-start" aria-hidden="false">
+    <div class="deco-shape deco-circle deco-circle--gold" aria-hidden="true"></div>
+    <div class="deco-shape deco-circle deco-circle--teal" aria-hidden="true"></div>
+    <div class="deco-shape deco-star" aria-hidden="true">★</div>
+    <div class="deco-shape deco-star deco-star--2" aria-hidden="true">★</div>
+
+    <div class="start-card">
+      <p class="eyebrow-plain">文化財(ぶんかざい)クイズラリー</p>
+      <h1 id="quiz-title" class="quiz-title">千手観音クイズ</h1>
+      <p id="start-description" class="start-description"></p>
+      <button id="btn-start" class="btn btn-primary btn-start" type="button">
+        スタート
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ ②問題画面 ============ -->
+  <section id="screen-question" class="screen screen-question" hidden>
+    <div class="question-header">
+      <div class="progress-info">
+        <span id="progress-text" class="progress-text"></span>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <h2 id="question-text" class="question-text"></h2>
+      <div id="choices" class="choices" role="group" aria-label="選択肢"></div>
+    </div>
+  </section>
+
+  <!-- ============ ③④正解・不正解画面(共通テンプレート) ============ -->
+  <section id="screen-feedback" class="screen screen-feedback" hidden>
+    <div class="feedback-card">
+      <div id="feedback-badge" class="feedback-badge" aria-live="polite"></div>
+
+      <div class="feedback-body">
+        <p class="feedback-label">正解</p>
+        <p id="feedback-correct-answer" class="feedback-answer"></p>
+
+        <p class="feedback-label">解説</p>
+        <p id="feedback-explanation" class="feedback-explanation"></p>
+      </div>
+
+      <button id="btn-next" class="btn btn-primary" type="button">次の問題へ</button>
+    </div>
+  </section>
+
+  <!-- ============ ⑤結果画面 ============ -->
+  <section id="screen-result" class="screen screen-result" hidden>
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+
+    <div class="result-card">
+      <h2 class="result-title">クイズ終了！</h2>
+      <p id="result-score" class="result-score"></p>
+      <p id="result-message" class="result-message"></p>
+
+      <div class="cta-box">
+        <p id="cta-heading" class="cta-heading"></p>
+        <p id="cta-message" class="cta-message"></p>
+      </div>
+
+      <button id="btn-restart" class="btn btn-secondary" type="button">もう一度挑戦する</button>
+    </div>
+  </section>
+
+  <!-- 読み込みエラー時のみ表示 -->
+  <p id="load-error" class="load-error" hidden>
+    クイズデータの読み込みに失敗しました。ページを再読み込みしてください。
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
