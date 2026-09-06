@@ -176,7 +176,7 @@ button {
 }
 
 .eyebrow-plain {
-  margin: 0 0 8px;
+  margin: 0 0 24px;
   color: var(--color-primary);
   font-weight: 500;
   font-size: 0.95rem;
